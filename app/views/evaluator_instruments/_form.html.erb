@@ -1,0 +1,32 @@
+<%= form_with(model: evaluator_instrument) do |form| %>
+  <% if evaluator_instrument.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(evaluator_instrument.errors.count, "error") %> prohibited this evaluator_instrument from being saved:</h2>
+
+      <ul>
+        <% evaluator_instrument.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :evaluator_id, style: "display: block" %>
+    <%= form.text_field :evaluator_id %>
+  </div>
+
+  <div>
+    <%= form.label :instrument_id, style: "display: block" %>
+    <%= form.text_field :instrument_id %>
+  </div>
+
+  <div>
+    <%= form.label :date, style: "display: block" %>
+    <%= form.date_field :date %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

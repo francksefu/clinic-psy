@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @evaluator_instrument %>
+
+<div>
+  <%= link_to "Edit this evaluator instrument", edit_evaluator_instrument_path(@evaluator_instrument) %> |
+  <%= link_to "Back to evaluator instruments", evaluator_instruments_path %>
+
+  <%= button_to "Destroy this evaluator instrument", @evaluator_instrument, method: :delete %>
+</div>

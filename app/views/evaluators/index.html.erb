@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Evaluators</h1>
+
+<div id="evaluators">
+  <% @evaluators.each do |evaluator| %>
+    <%= render evaluator %>
+    <p>
+      <%= link_to "Show this evaluator", evaluator %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New evaluator", new_evaluator_path %>
